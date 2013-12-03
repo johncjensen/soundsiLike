@@ -12,3 +12,20 @@
  *= require_tree .
  *= require bootstrap
  */
+
+body {
+	padding-top: 70px;
+}
+
+.smallthing {
+	max-width: 75px;
+	max-height: 75px;
+	margin-right: 25px;
+}
+
+a {text-decoration: none;}
+a:hover {text-decoration: none;}
+
+.trackz{
+	min-height: 75px;
+}
