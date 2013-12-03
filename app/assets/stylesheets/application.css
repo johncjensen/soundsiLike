@@ -14,7 +14,21 @@
  */
 
 body {
-	padding-top: 70px;
+	background-color: #34495E !important;
+	padding-top: 50px;
+}
+
+h1, h2, h3, h4, h5, h6	{
+color:#f6f6f6 !important;
+}
+
+.btn-primary {
+	background-color: #33485F !important;
+}
+
+.list-group, .list-group-item {
+	background-color: #F5F5F5 !important;
+	border-radius: 5px !important;
 }
 
 .smallthing {

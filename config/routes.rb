@@ -1,5 +1,5 @@
 Soundsilike::Application.routes.draw do
-  root to: "home#index"
+  root to: "home#edm"
   get 'test', to: 'home#test'
   get 'login', to: 'home#login'
   get 'home', to: 'home#home'

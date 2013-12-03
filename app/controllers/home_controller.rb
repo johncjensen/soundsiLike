@@ -4,7 +4,7 @@ class HomeController < ApplicationController
     # register a client with YOUR_CLIENT_ID as client_id_
     # client = SoundCloud.new(:client_id => '59cdce76e37ac23f9576fc52793b6494')
     # get 10 hottest tracks
-    tracks = client.get('/tracks', :limit => 100, :tags => 'edm', :filter => 'downloadable', :order => 'hotness')
+    tracks = client.get('/tracks', :limit => 15, :tags => 'edm', :filter => 'downloadable', :order => 'hotness')
     @hotmusic = tracks
 
   end
@@ -15,7 +15,7 @@ class HomeController < ApplicationController
     # register a client with YOUR_CLIENT_ID as client_id_
     # client = SoundCloud.new(:client_id => '59cdce76e37ac23f9576fc52793b6494')
     # get 10 hottest tracks
-    tracks = client.get('/tracks', :limit => 100, :tags => 'edm', :filter => 'downloadable', :order => 'hotness')
+    tracks = client.get('/tracks', :limit => 15, :tags => 'edm', :filter => 'downloadable', :order => 'hotness')
     @hotmusic = tracks
 
   end
@@ -25,7 +25,7 @@ class HomeController < ApplicationController
     # register a client with YOUR_CLIENT_ID as client_id_
     # client = SoundCloud.new(:client_id => '59cdce76e37ac23f9576fc52793b6494')
     # get 10 hottest tracks
-    tracks = client.get('/tracks', :limit => 100, :tags => 'house', :filter => 'downloadable', :order => 'hotness')
+    tracks = client.get('/tracks', :limit => 15, :tags => 'house', :filter => 'downloadable', :order => 'hotness')
     @hotmusic = tracks
 
   end
@@ -35,7 +35,7 @@ class HomeController < ApplicationController
     # register a client with YOUR_CLIENT_ID as client_id_
     # client = SoundCloud.new(:client_id => '59cdce76e37ac23f9576fc52793b6494')
     # get 10 hottest tracks
-    tracks = client.get('/tracks', :limit => 100, :tags => 'trance', :filter => 'downloadable', :order => 'hotness')
+    tracks = client.get('/tracks', :limit => 15, :tags => 'trance', :filter => 'downloadable', :order => 'hotness')
     @hotmusic = tracks
 
   end
@@ -45,7 +45,7 @@ class HomeController < ApplicationController
     # register a client with YOUR_CLIENT_ID as client_id_
     # client = SoundCloud.new(:client_id => '59cdce76e37ac23f9576fc52793b6494')
     # get 10 hottest tracks
-    tracks = client.get('/tracks', :limit => 100, :tags => 'dubstep', :filter => 'downloadable', :order => 'hotness')
+    tracks = client.get('/tracks', :limit => 15, :tags => 'dubstep', :filter => 'downloadable', :order => 'hotness')
     @hotmusic = tracks
 
   end
@@ -55,7 +55,7 @@ class HomeController < ApplicationController
     # register a client with YOUR_CLIENT_ID as client_id_
     # client = SoundCloud.new(:client_id => '59cdce76e37ac23f9576fc52793b6494')
     # get 10 hottest tracks
-    tracks = client.get('/tracks', :limit => 100, :tags => 'trap', :filter => 'downloadable', :order => 'hotness')
+    tracks = client.get('/tracks', :limit => 15, :tags => 'trap', :filter => 'downloadable', :order => 'hotness')
     @hotmusic = tracks
 
   end
