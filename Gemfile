@@ -44,6 +44,10 @@ gem 'better_errors'
 gem 'binding_of_caller'
 end
 
+
+gem 'omniauth'
+gem 'omniauth-facebook', '~>1.5.1'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

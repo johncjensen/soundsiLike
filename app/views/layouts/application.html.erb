@@ -9,7 +9,6 @@
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 </head>
 
-
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
@@ -30,31 +29,52 @@
       <li><a href="trance">Trance</a></li>
       <li><a href="dubstep">Dubstep</a></li>
       <li><a href="trap">Trap</a></li>
-<!--       <li><a href="#"><%= rand(5..30) %></li></a> -->
     </ul>
-    <!-- <form class="navbar-form navbar-left" role="search">
+
+<!--     <form class="navbar-form navbar-left" role="search">
       <div class="form-group">
-        <input type="text" class="form-control" placeholder="Search">
+        <input type="text" class="form-control" placeholder="Find awesome sounds">
       </div>
       <button type="submit" class="btn btn-default">Submit</button>
     </form> -->
-    <!-- <ul class="nav navbar-nav navbar-right">
-      <li><a href="#">Link</a></li>
+
+    <form class="navbar-form navbar-left" role="search">
+  <%= form_tag(download_bin_path, :method => :get) do %>
+    <div class="form-group">
+    <%= text_field_tag :keywords, nil, 
+      {:class => "form-control", :placeholder => "Find awesome sounds"} %>
+    </div>
+    <%= hidden_field_tag :use_keywords, "true" %>
+    <%= hidden_field_tag :wide_search, "true" %>
+  <% end %>
+</form>
+
+
+    <ul class="nav navbar-nav navbar-right">
+ 
       <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+        <% if current_user %>
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.name %><b class="caret"></b></a>
         <ul class="dropdown-menu">
-          <li><a href="#">Action</a></li>
-          <li><a href="#">Another action</a></li>
-          <li><a href="#">Something else here</a></li>
-          <li class="divider"></li>
-          <li><a href="#">Separated link</a></li>
+          <li><a href="download-bin">Download Bin</a></li>
+          <li><%= link_to "Sign out", signout_path, id: "sign_out" %></li>
+          
+          
         </ul>
-      </li>
-    </ul> -->
+    <% else %>
+
+    <li><%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %></li>
+    <% end %>
+    </li>
+    </ul>
   </div><!-- /.navbar-collapse -->
 </nav>
 
 
+
+<div id="user-widget">
+  
+</div>
 
 
 

@@ -8,4 +8,11 @@ Soundsilike::Application.routes.draw do
   get 'trance', to: 'home#trance'
   get 'dubstep', to: 'home#dubstep'
   get 'trap', to: 'home#trap'
+
+  get 'download-bin', to: 'backend#bin', as: 'download_bin'
+
+
+  match 'auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
+  match 'auth/failure', to: redirect('/'), via: [:get, :post]
+  match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post]
 end
