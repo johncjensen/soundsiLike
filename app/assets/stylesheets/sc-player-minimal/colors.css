@@ -50,7 +50,7 @@
 
 .sc-player .sc-controls a {
   color: transparent;
-  background: url('img/play.png');
+  background: url(<%= asset_path 'img/play.png' %>);
 }
 
 .sc-player .sc-controls a:hover {
