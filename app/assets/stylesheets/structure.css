@@ -71,7 +71,7 @@
   left: -5000px;
   bottom: 10px;
   max-height: 50px;
-  width: 95.5%;
+  max-width: 95.5%;
 }
 
 .sc-player:hover .sc-scrubber, .sc-player.playing .sc-scrubber {

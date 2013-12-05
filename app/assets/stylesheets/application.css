@@ -43,3 +43,9 @@ a:hover {text-decoration: none;}
 .trackz{
 	min-height: 75px;
 }
+
+.center {
+    float:none;
+    margin-left: auto;
+    margin-right: auto;
+}

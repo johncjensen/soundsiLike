@@ -1,0 +1,13 @@
+<h2>Your Download Bin</h2>
+
+<%= link_to "Delete", downloads_path(@download), method: :delete %>
+
+<ul class='list-group'>
+  <% @downloads.each do |dl| %>
+    <li class='list-group-item clearfix'>
+    <h6 style="color:#33485F !important; margin: 0;"><%= time_ago_in_words dl.created_at %></h6 >
+     <h4 class="pull-left" style="color:#33485F !important; margin: 10px 0;"><%= dl.title %></h4>
+      <div class="pull-right"><%= button_to "Download", dl.url, :class=> "btn btn-primary", :target=> "_blank" %></div>
+    </li>
+  <% end %>
+</ul>

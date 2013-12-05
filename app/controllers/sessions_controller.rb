@@ -3,8 +3,8 @@ skip_before_filter :check_sign_in, :only => [:new, :create]
   def create
     user = User.from_omniauth(env["omniauth.auth"])
     session[:user_id] = user.id
-    redirect_to download_bin_path
-    
+    redirect_to downloads_path
+
   end
 
   def destroy

@@ -1,0 +1,21 @@
+<h2>Trance</h2>
+<ul class="list-group">
+	<% @hotmusic.each do |track| %>
+	<li class="list-group-item trackz">
+		<i class="fa fa-cloud-download fa-2x"></i><font style="color: #33485F !important; font-size: 18px; margin-left:10px;"><%= track.download_count %></font>
+		<p class="pull-right"><%= link_to "Download", "#{track.permalink_url}/download", :class => "btn btn-primary", :target => "_self" %></p>
+		<br>
+		<br>
+		<a href="<%= track.uri %>" class="sc-player"></a>
+		<% if current_user %>
+		<%= form_for @trance, :url => { :controller => "downloads", :action => "create" }, :html => {:method => :post} do |f| %>
+		
+		<%= f.hidden_field :title, :value => track.title %>
+		<%= f.hidden_field :url, :value => "#{track.permalink_url}/download" %>
+		<%= f.hidden_field :user_id, :value => current_user.id %>
+		<%= f.submit 'add to bin', :class =>  'btn btn-primary' %>
+		<% end %>
+		<% end %>
+	</li>
+	<% end %>
+</ul>
