@@ -1,10 +1,10 @@
 <br>
 <h1 style="color:#f6f6f6;">House</h1>
 <br>
+<div class="row">
 <% @hotmusic.each do |track| %>
-
-<div plangular data-src="'<%= track.permalink_url %>'" class="grid-1 mb4">
-  <p style="color:#f6f6f6;"><%=h truncate(track.title, :length => 62) %></p>
+<div plangular data-src="'<%= track.permalink_url %>'" class="col-4">
+  <p style="color:#f6f6f6;"><%=h truncate(track.title, :length => 44) %></p>
   <div class="asp-16o9 bg-center bg-cover pos-rel" style="background-image: url(<%= track.artwork_url.to_s.gsub('-large', '-t500x500') %>)">
     <div class="media pos-abs right bottom left">
       <div class="img sq48 sq48-text">
@@ -34,5 +34,5 @@
   <% end %>
   <% end %>
 </div>
-
 <% end %>
+</div>

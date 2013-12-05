@@ -71,23 +71,23 @@ code, pre, samp, .mono { font-family: 'Source Code Pro', monospace; }
 .m0 { margin: 0; }
 .mt-5 { margin-top: 8px; }
 
-.m1  { margin:        16px; }
-.mt1 { margin-top:    16px; }
-.mr1 { margin-right:  16px; }
-.mb1 { margin-bottom: 16px; }
-.ml1 { margin-left:   16px; }
+.m1  { margin:        8px; }
+.mt1 { margin-top:    8px; }
+.mr1 { margin-right:  8px; }
+.mb1 { margin-bottom: 8px; }
+.ml1 { margin-left:   8px; }
 
-.m2  { margin:        32px; }
-.mt2 { margin-top:    32px; }
-.mr2 { margin-right:  32px; }
-.mb2 { margin-bottom: 32px; }
-.ml2 { margin-left:   32px; }
+.m2  { margin:        16px; }
+.mt2 { margin-top:    16px; }
+.mr2 { margin-right:  16px; }
+.mb2 { margin-bottom: 16px; }
+.ml2 { margin-left:   16px; }
 
-.m4  { margin:        64px; }
-.mt4 { margin-top:    64px; }
-.mr4 { margin-right:  64px; }
-.mb4 { margin-bottom: 64px; }
-.ml4 { margin-left:   64px; }
+.m4  { margin:        32px; }
+.mt4 { margin-top:    32px; }
+.mr4 { margin-right:  32px; }
+.mb4 { margin-bottom: 32px; }
+.ml4 { margin-left:   32px; }
 
 .tappad { 
   /*min-height: 48px;*/

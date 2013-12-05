@@ -31,28 +31,35 @@
 <nav id="menu">
             <ul class="nav">
               <li><a class="brand" href="/">soundiLike</a></li>
-              <li><a href="dubstep">Dubstep</a></li>
-              <li><a href="house">House</a></li>
-              <li><a href="trance">Trance</a></li>
-              <li><a href="trap">Trap</a></li>
+
+
+               <% if current_user %>
               <li class="dropdown">
-                <% if current_user %>
+                
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#"><%= current_user.name %><b class="caret bottom-up"></b></a>
                 <ul class="dropdown-menu bottom-up pull-right">
                   <li><a href="downloads">Track Bin</a></li>
                   <li><%= link_to "Sign out", signout_path, id: "sign_out" %></li>
                 </ul>
                 <% else %>
-                <li><%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %></li>
+                <li><%= button_to "Sign in with Facebook", "/auth/facebook", id: "sign_in", :class => "btn btn-info btn-navbar" %></li>
               </li>
+
               <% end %>
+
+
+              <li><a href="dubstep">Dubstep</a></li>
+              <li><a href="house">House</a></li>
+              <li><a href="trance">Trance</a></li>
+              <li><a href="trap">Trap</a></li>
+            
             </ul>
-            <form action="" method="get" accept-charset="utf-8" class="navbar-form pull-right search-navbar-form">
+            <!-- <form action="" method="get" accept-charset="utf-8" class="navbar-form pull-right search-navbar-form">
               <div class="form-fields">
                 <input type="text" name="" id="" value="" placeholder="Search" class="">
               </div>
               <input type="submit" name="" id="" value="Search" class="btn btn-info">
-            </form>
+            </form> -->
           </nav>
 
           
