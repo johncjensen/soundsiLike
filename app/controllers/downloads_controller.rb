@@ -7,6 +7,7 @@ class DownloadsController < ApplicationController
     @downloads = Download.where user_id: is = current_user.id
   end
 
+
   def new
     @download = Download.new
   end
@@ -26,7 +27,6 @@ class DownloadsController < ApplicationController
     @clearbin = Download.where user_id: is = current_user.id
     @clearbin.destroy
     flash[:info] = "Donesies!!!"
-
     redirect_to downloads_path
   end
 
@@ -36,9 +36,5 @@ class DownloadsController < ApplicationController
   def download_params
     params.permit(:title, :url, :user_id)
   end
-
-
-
-
 
 end

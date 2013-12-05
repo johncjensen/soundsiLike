@@ -33,6 +33,7 @@ GEM
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.1.4)
+    chunky_png (1.2.9)
     coderay (1.1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -41,11 +42,18 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    compass (0.12.2)
+      chunky_png (~> 1.2)
+      fssm (>= 0.2.7)
+      sass (~> 3.1)
+    compass-rails (2.0.alpha.0)
+      compass (>= 0.12.2, < 0.14)
     debug_inspector (0.0.2)
     erubis (2.7.0)
     execjs (2.0.2)
     faraday (0.8.8)
       multipart-post (~> 1.2.0)
+    fssm (0.2.10)
     hashie (2.0.5)
     hike (1.2.3)
     httmultiparty (0.3.10)
@@ -117,10 +125,6 @@ GEM
     rdoc (3.12.2)
       json (~> 1.4)
     sass (3.2.12)
-    sass-rails (4.0.1)
-      railties (>= 4.0.0, < 5.0)
-      sass (>= 3.1.10)
-      sprockets-rails (~> 2.0.0)
     sdoc (0.3.20)
       json (>= 1.1.3)
       rdoc (~> 3.10)
@@ -158,6 +162,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   coffee-rails (~> 4.0.0)
+  compass-rails (~> 2.0.alpha.0)
   jbuilder (~> 1.2)
   jquery-rails
   jquery-turbolinks
@@ -166,7 +171,6 @@ DEPENDENCIES
   pg
   rails (= 4.0.1)
   rails_12factor
-  sass-rails (~> 4.0.0)
   sdoc
   soundcloud (~> 0.3.2)
   sqlite3
