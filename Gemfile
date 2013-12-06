@@ -21,7 +21,6 @@ gem 'compass-rails', '~> 2.0.alpha.0'
 gem "soundcloud", "~> 0.3.2"
 gem 'omniauth'
 gem 'omniauth-facebook', '~>1.5.1'
-gem 'furatto'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'

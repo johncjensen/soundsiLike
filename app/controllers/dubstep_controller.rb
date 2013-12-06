@@ -7,8 +7,35 @@ class DubstepController < ApplicationController
     tracks = client.get('/tracks', :limit => 21, :tags => 'dubstep', :filter => 'downloadable', :order => 'hotness')
     @hotmusic = tracks
 
-    
+
     @dubstep = ''
+
+
+    @download = Download.new
+
   end
+
+
+    def new
+    @download = Download.new
+  end
+
+
+  def create
+    @download = Download.create(download_params)
+    respond_to do |format|
+      if @download.save
+        format.js   {}
+      end
+    end
+  end
+
+
+    def destroy
+      @clearbin = Download.where user_id: is = current_user.id
+      @clearbin.destroy
+      flash[:info] = "Donesies!!!"
+      redirect_to downloads_path
+    end
 
 end

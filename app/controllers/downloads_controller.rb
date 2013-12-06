@@ -15,26 +15,26 @@ class DownloadsController < ApplicationController
 
   def create
     @download = Download.create(download_params)
-    if @download.save
-      redirect_to(:back)
-    else
-      render :action => 'new'
+    respond_to do |format|
+      if @download.save
+        format.js   {}
+      end
     end
   end
 
 
-  def destroy
-    @clearbin = Download.where user_id: is = current_user.id
-    @clearbin.destroy
-    flash[:info] = "Donesies!!!"
-    redirect_to downloads_path
+    def destroy
+      @clearbin = Download.where user_id: is = current_user.id
+      @clearbin.destroy
+      flash[:info] = "Donesies!!!"
+      redirect_to downloads_path
+    end
+
+
+    private
+
+    def download_params
+      params.permit(:title, :url, :user_id)
+    end
+
   end
-
-
-  private
-
-  def download_params
-    params.permit(:title, :url, :user_id)
-  end
-
-end

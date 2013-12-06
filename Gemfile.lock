@@ -54,7 +54,6 @@ GEM
     faraday (0.8.8)
       multipart-post (~> 1.2.0)
     fssm (0.2.10)
-    furatto (0.0.3)
     hashie (2.0.5)
     hike (1.2.3)
     httmultiparty (0.3.10)
@@ -168,7 +167,6 @@ DEPENDENCIES
   binding_of_caller
   coffee-rails (~> 4.0.0)
   compass-rails (~> 2.0.alpha.0)
-  furatto
   jbuilder (~> 1.2)
   jquery-rails
   jquery-turbolinks
