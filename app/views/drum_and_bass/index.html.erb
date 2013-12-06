@@ -1,10 +1,10 @@
 <br>
-<h1 style="color:#f6f6f6;">Dubstep</h1>
+<h1 style="color:#f6f6f6;">Drum &amp; Bass</h1>
 <br>
 <div class="row">
 <% @hotmusic.each do |track| %>
 <div plangular data-src="'<%= track.permalink_url %>'" class="col-4">
-  <small style="color:#f6f6f6;"><%=h truncate(track.title, :length => 70) %></small>
+  <p style="color:#f6f6f6;"><%=h truncate(track.title, :length => 44) %></p>
   <div class="asp-16o9 bg-center bg-cover pos-rel" style="background-image: url(<%= track.artwork_url.to_s.gsub('-large', '-t500x500') %>)">
     <div class="media pos-abs right bottom left">
       <div class="img sq48 sq48-text">
@@ -24,9 +24,10 @@
     </div>
   </div>
   <a ng-href="{{ track.permalink_url }}/download" target="_blank" class="btn btn-small btn-info pull-right"><i class="fa fa-download"></i> Download</a>
+  
 
   <% if current_user %>
-  <%= form_for @dubstep, :url => { :controller => "downloads", :action => "create" }, remote: true do |f| %>
+  <%= form_for @drum_and_bass, :url => { :controller => "downloads", :action => "create" }, remote: true do |f| %>
   
   <%= f.hidden_field :title, :value => track.title %>
   <%= f.hidden_field :url, :value => "#{track.permalink_url}/download" %>
@@ -35,6 +36,7 @@
     <i class="fa fa-plus"></i> Add to Bin</i>
   <% end %>
   <% end %>
+
   <% else %>
   <%= button_to "Sign in with Facebook", "/auth/facebook", id: "sign_in", :class => "btn" %>
 

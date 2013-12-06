@@ -54,8 +54,6 @@
 }
 
 
-
-
 h1, h2, h3, h4, h5, h6	{
 color:#f6f6f6 !important;
 }
@@ -67,6 +65,10 @@ color:#f6f6f6 !important;
 
 .frontpage-header-outline {
 	font-family: 'sifonnbasic_outline';
+}
+
+form {
+    margin: 0!important;
 }
 
 /*

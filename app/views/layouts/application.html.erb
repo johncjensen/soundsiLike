@@ -3,6 +3,7 @@
   <head>
     <title>soundsiLike</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <%= stylesheet_link_tag    "application", media: "all" %>
     <script src="//connect.soundcloud.com/sdk.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
@@ -10,7 +11,7 @@
     <%= csrf_meta_tags %>
     
   </head>
-  <div class="panels ">
+  <div class="panels">
     <div class="panel panel-left">
     </div>
   </div>
@@ -23,25 +24,58 @@
             
             <nav id="menu">
               <ul class="nav">
-                <li><a class="brand" href="/">soundiLike</a></li>
+                <li><a class="brand" href="/">soundsiLike</a></li>
                 <% if current_user %>
-                <li class="dropdown">
-                  
+                <li class="dropdown pull-right">
                   <a class="dropdown-toggle" data-toggle="dropdown" href="#"><%= current_user.name %><b class="caret bottom-up"></b></a>
-                  <ul class="dropdown-menu bottom-up pull-right">
-                    <li><a href="downloads">Track Bin</a></li>
-                    <li><%= link_to "Sign out", signout_path, id: "sign_out" %></li>
+                  <ul class="dropdown-menu bottom-up">
+                    <li><a href="downloads" class="fa fa-download"> Track Bin</a></li>
+                    <li><%= link_to " Sign out", signout_path, id: "sign_out", :class => "fa fa-sign-out" %></li>
                   </ul>
                   <% else %>
                   <li><%= button_to "Sign in with Facebook", "/auth/facebook", id: "sign_in", :class => "btn btn-info btn-navbar" %></li>
                 </li>
                 <% end %>
+                
+                <li><a href="drum-and-bass">Drum &amp; Bass</a></li>
                 <li><a href="dubstep">Dubstep</a></li>
-                <li><a href="house">House</a></li>
-                <li><a href="trance">Trance</a></li>
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">House<b class="caret bottom-up"></b></a>
+                  <ul class="dropdown-menu bottom-up pull-right">
+                    <li><a href="acid-house">Acid House</a></li>
+                    <li><a href="big-room-house">Big Room House</a></li>
+                    <li><a href="chicago-house">Chicago House</a></li>
+                    <li><a href="deep-house">Deep House</a></li>
+                    <li><a href="dutch-house">Dutch House</a></li>
+                    <li><a href="electro-house">Electro House</a></li>
+                    <li><a href="funky-house">Funky House</a></li>
+                    <li><a href="house">House</a></li>
+                    <li><a href="moombahton">Moombahton</a></li>
+                    <li><a href="nu-disco">Nu Disco</a></li>
+                    <li><a href="progressive-house">Progressive House</a></li>
+                    <li><a href="tech-house">Tech House</a></li>
+                  </ul>
+                </li>
+                
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">Trance<b class="caret bottom-up"></b></a>
+                  <ul class="dropdown-menu bottom-up pull-right">
+                    <li><a href="goa-trance">Goa Trance</a></li>
+                    <li><a href="hard-trance">Hard Trance</a></li>
+                    <li><a href="progressive-trance">Progressive Trance</a></li>
+                    <li><a href="psy-trance">Psy Trance</a></li>
+                    <li><a href="tech-trance">Tech Trance</a></li>
+                    <li><a href="trance">Trance</a></li>
+                    <li><a href="uplifting-trance">Uplifting Trance</a></li>
+                    <li><a href="vocal-trance">Vocal Trance</a></li>
+                  </ul>
+                </li>
+                
                 <li><a href="trap">Trap</a></li>
                 
+                
               </ul>
+              
               <!-- <form action="" method="get" accept-charset="utf-8" class="navbar-form pull-right search-navbar-form">
                 <div class="form-fields">
                   <input type="text" name="" id="" value="" placeholder="Search" class="">
@@ -57,6 +91,14 @@
     <body>
       <div class="container-center">
         <%= yield %>
+      </div>
+      <div class="row footer">
+        <p class="copyright">soundsiLike</p>
+        <ul class="inline">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
       </div>
     </body>
   </html>

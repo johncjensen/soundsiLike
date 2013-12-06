@@ -1,14 +1,14 @@
-class TranceController < ApplicationController
+class ProgressiveTranceController < ApplicationController
   def index
     client = Soundcloud.new(:client_id => '59cdce76e37ac23f9576fc52793b6494')
     # register a client with YOUR_CLIENT_ID as client_id_
     # client = SoundCloud.new(:client_id => '59cdce76e37ac23f9576fc52793b6494')
     # get 10 hottest tracks
-    tracks = client.get('/tracks', :limit => 21, :genres => 'trance', :filter => 'downloadable', :order => 'hotness')
+    tracks = client.get('/tracks', :limit => 21, :genres => 'progressive trance', :filter => 'downloadable', :order => 'hotness')
     @hotmusic = tracks
 
     
-    @trance = ''
+    @progressive_trance = ''
   end
 
 end
