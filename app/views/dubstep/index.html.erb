@@ -23,7 +23,7 @@
       </div>
     </div>
   </div>
-  <a ng-href="{{ track.permalink_url }}/download" target="_blank" class="btn btn-primary pull-right">Download</a>
+  <a ng-href="{{ track.permalink_url }}/download" target="_blank" class="btn btn-info pull-right">Download</a>
   
 
   <% if current_user %>
@@ -32,8 +32,14 @@
   <%= f.hidden_field :title, :value => track.title %>
   <%= f.hidden_field :url, :value => "#{track.permalink_url}/download" %>
   <%= f.hidden_field :user_id, :value => current_user.id %>
-  <%= f.submit 'add to bin', :class =>  'btn btn-primary' %>
+  <%= f.submit 'add to bin', :class =>  'btn btn-primary pull-left' %>
   <% end %>
+
+  <% else %>
+  <%= button_to "Sign in with Facebook", "/auth/facebook", id: "sign_in", :class => "btn" %>
+
+
+  
   <% end %>
 </div>
 <% end %>
