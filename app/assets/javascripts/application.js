@@ -12,7 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+//= require download
+//= require furatto.min
+//= require facebook
+//= require angular-app
+//= require plangular
 
 
 
