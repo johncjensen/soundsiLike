@@ -14,21 +14,21 @@ group :production do
   gem 'pg'
   gem 'rails_12factor'
 end
+  
+gem 'compass-rails', '~> 2.0.alpha.0'
 
-group :assets do
-  gem 'compass-rails', '~> 2.0.alpha.0'
-end
 
 gem "soundcloud", "~> 0.3.2"
 gem 'omniauth'
 gem 'omniauth-facebook', '~>1.5.1'
+gem 'furatto'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 gem 'jquery-turbolinks'
 
 # Use SCSS for stylesheets
-# gem 'sass-rails', '~> 4.0.0'
+gem 'sass-rails', '~> 4.0.0'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

@@ -5,73 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
     <script src="//connect.soundcloud.com/sdk.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.4/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
-  
+    
   </head>
-
-
   <div class="panels ">
-  <div class="panel panel-left">
+    <div class="panel panel-left">
+    </div>
   </div>
-</div>
-
-
-<div class="panel-content example-panel-padding">
-  <div class="navbar navbar-fixed-top">
-    <div class="navbar-inner docs-navbar-inner">
-      <div class="container">
-        <a href="#menu" class="menu-trigger meteocon" data-meteocon="M" data-toggle="panel" data-target="#menu"></a>
-        <div class="nav-collapse collapse">
-          
-
-
-
-<nav id="menu">
-            <ul class="nav">
-              <li><a class="brand" href="/">soundiLike</a></li>
-
-
-               <% if current_user %>
-              <li class="dropdown">
-                
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><%= current_user.name %><b class="caret bottom-up"></b></a>
-                <ul class="dropdown-menu bottom-up pull-right">
-                  <li><a href="downloads">Track Bin</a></li>
-                  <li><%= link_to "Sign out", signout_path, id: "sign_out" %></li>
-                </ul>
-                <% else %>
-                <li><%= button_to "Sign in with Facebook", "/auth/facebook", id: "sign_in", :class => "btn btn-info btn-navbar" %></li>
-              </li>
-
-              <% end %>
-
-
-              <li><a href="dubstep">Dubstep</a></li>
-              <li><a href="house">House</a></li>
-              <li><a href="trance">Trance</a></li>
-              <li><a href="trap">Trap</a></li>
+  <div class="panel-content example-panel-padding">
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner docs-navbar-inner">
+        <div class="container">
+          <a href="#menu" class="menu-trigger meteocon" data-meteocon="M" data-toggle="panel" data-target="#menu"></a>
+          <div class="nav-collapse collapse">
             
-            </ul>
-            <!-- <form action="" method="get" accept-charset="utf-8" class="navbar-form pull-right search-navbar-form">
-              <div class="form-fields">
-                <input type="text" name="" id="" value="" placeholder="Search" class="">
-              </div>
-              <input type="submit" name="" id="" value="Search" class="btn btn-info">
-            </form> -->
-          </nav>
-
-          
+            <nav id="menu">
+              <ul class="nav">
+                <li><a class="brand" href="/">soundiLike</a></li>
+                <% if current_user %>
+                <li class="dropdown">
+                  
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#"><%= current_user.name %><b class="caret bottom-up"></b></a>
+                  <ul class="dropdown-menu bottom-up pull-right">
+                    <li><a href="downloads">Track Bin</a></li>
+                    <li><%= link_to "Sign out", signout_path, id: "sign_out" %></li>
+                  </ul>
+                  <% else %>
+                  <li><%= button_to "Sign in with Facebook", "/auth/facebook", id: "sign_in", :class => "btn btn-info btn-navbar" %></li>
+                </li>
+                <% end %>
+                <li><a href="dubstep">Dubstep</a></li>
+                <li><a href="house">House</a></li>
+                <li><a href="trance">Trance</a></li>
+                <li><a href="trap">Trap</a></li>
+                
+              </ul>
+              <!-- <form action="" method="get" accept-charset="utf-8" class="navbar-form pull-right search-navbar-form">
+                <div class="form-fields">
+                  <input type="text" name="" id="" value="" placeholder="Search" class="">
+                </div>
+                <input type="submit" name="" id="" value="Search" class="btn btn-info">
+              </form> -->
+            </nav>
+            
+          </div>
         </div>
       </div>
     </div>
-  </div>
-
-
-  <body>
-    <div class="container-center">
-    <%= yield %>
-  </div>
-  </body>
-</html>
+    <body>
+      <div class="container-center">
+        <%= yield %>
+      </div>
+    </body>
+  </html>
