@@ -37,7 +37,13 @@
     font-style: normal;
 }
 
-.container-center {}
+.genre-title {
+    margin: 20px 0;
+}
+
+.track-title {
+    color:#f6f6f6;
+}
 
 html {
         background-color: #34495E !important;
@@ -68,8 +74,6 @@ html {
 .list-group-item:focus {
     opacity: 1;
 }
-
-
 
 
 h1, h2, h3, h4, h5, h6	{

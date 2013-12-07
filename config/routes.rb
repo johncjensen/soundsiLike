@@ -1,10 +1,13 @@
 Soundsilike::Application.routes.draw do
   root to: "home#index"
+
+  #download bin stuff
   resources :downloads, only:[:index, :new, :create, :destroy]
   get '/clearbin', :to => 'downloads#destroy'
-  resources :trap, only: [:index]
-  resources :dubstep, only: [:index]
+  #end download bin stuff
 
+  
+  resources :dubstep, only: [:index]
   resources :drum_and_bass, only: [:index], path: "drum-and-bass"
 
 
@@ -36,6 +39,8 @@ Soundsilike::Application.routes.draw do
   resources :uplifting_trance, only: [:index], path: "uplifting-trance"
   resources :vocal_trance, only: [:index], path: "vocal-trance"
   # end trance
+
+  resources :trap, only: [:index]
 
   
   # omniauth facebook

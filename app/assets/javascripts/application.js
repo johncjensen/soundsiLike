@@ -21,8 +21,14 @@
 $(document).ready(function () {
 if (window.location.href.indexOf('#_=_') > 0) {
 window.location = window.location.href.replace(/#.*/, '');
-}
-$('.addbin').on('click', function () {
-$('.addbin').hide();
-});
-});
+}});
+
+
+// $(document).ready(function () {
+// if (window.location.href.indexOf('#_=_') > 0) {
+// window.location = window.location.href.replace(/#.*/, '');
+// }
+// $('<%= track.id %>').on('click', function () {
+// $('<%= track.id %>').hide();
+// });
+// });

@@ -1,48 +1,46 @@
-<br>
-<h1 style="color:#f6f6f6;">Psy Trance</h1>
-<br>
+<h1 class="genre-title">Psy-Trance</h1>
 <div class="row">
-<% @hotmusic.each do |track| %>
-<div plangular data-src="'<%= track.permalink_url %>'" class="col-4">
-  <p style="color:#f6f6f6;"><%=h truncate(track.title, :length => 44) %></p>
-  <div class="asp-16o9 bg-center bg-cover pos-rel" style="background-image: url(<%= track.artwork_url.to_s.gsub('-large', '-t500x500') %>)">
-    <div class="media pos-abs right bottom left">
-      <div class="img sq48 sq48-text">
-        <a href="" ng-click="player.play(track)" ng-hide="player.playing == track"
-        class="db anim-popin">
-        <i class="icon-play db h3"></i></a>
-        <a href="" ng-click="player.pause()" ng-show="player.playing == track"
-        class="db white anim-popin">
-        <i class="icon-pause db h3"></i></a>
-      </div>
-      <div class="bd min-hi48 pos-rel">
-        <div class="pos-abs top right1 bottom left" ng-click="seekTo($event)">
-          <div class="pos-abs top right bottom left bg-white progress-thick"></div>
-          <div class="pos-abs top bottom left progress-thick bg-blue" style="width: {{ (currentTime / duration) * 100 }}%"></div>
+  <% @hotmusic.each do |track| %>
+  <script type="text/javascript">
+  $(document).ready(function () {
+  $('#<%= track.id %>').on('click', function () {
+  $('#<%= track.id %>').hide();
+  });
+  });
+  </script>
+  <div plangular data-src="'<%= track.permalink_url %>'" class="col-4">
+    <small class="track-title"><%=h truncate(track.title, :length => 54) %></small>
+    <div class="asp-16o9 bg-center bg-cover pos-rel" style="background-image: url(<%= track.artwork_url.to_s.gsub('-large', '-t500x500') %>)">
+      <div class="media pos-abs right bottom left">
+        <div class="img sq48 sq48-text">
+          <a href="" ng-click="player.play(track)" ng-hide="player.playing == track"
+          class="db white anim-popin">
+          <i class="icon-play db h3"></i></a>
+          <a href="" ng-click="player.pause()" ng-show="player.playing == track"
+          class="db anim-popin">
+          <i class="icon-pause db h3"></i></a>
+        </div>
+        <div class="bd min-hi48 pos-rel">
+          <div class="pos-abs top right1 bottom left" ng-click="seekTo($event)">
+            <div class="pos-abs top right bottom left bg-main progress-thick"></div>
+            <div class="pos-abs top bottom left progress-thick bg-white" style="width: {{ (currentTime / duration) * 100 }}%"></div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <a ng-href="{{ track.permalink_url }}/download" target="_blank" class="btn btn-small btn-info pull-right"><i class="fa fa-download"></i> Download</a>
-  
-
-  <% if current_user %>
-  <%= form_for @psy_trance, :url => { :controller => "downloads", :action => "create" }, remote: true do |f| %>
-  
-  <%= f.hidden_field :title, :value => track.title %>
-  <%= f.hidden_field :url, :value => "#{track.permalink_url}/download" %>
-  <%= f.hidden_field :user_id, :value => current_user.id %>
-  <%= button_tag(type: 'submit', class: "btn btn-primary btn-small") do %>
+    <a ng-href="{{ track.permalink_url }}/download" target="_blank" class="btn btn-small btn-info pull-right"><i class="fa fa-download"></i> Download</a>
+    <% if current_user %>
+    <%= form_for @downloads, :url => { :controller => "downloads", :action => "create" }, remote: true do |f| %>
+    <%= f.hidden_field :title, :value => track.title %>
+    <%= f.hidden_field :url, :value => "#{track.permalink_url}/download" %>
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+    <%= button_tag(type: 'submit', class: "btn btn-primary btn-small", :id => "#{track.id}") do %>
     <i class="fa fa-plus"></i> Add to Bin</i>
+    <% end %>
+    <% end %>
+    <% else %>
+    <%= button_to "Sign in with Facebook", "/auth/facebook", id: "sign_in", :class => "btn" %>
+    <% end %>
+  </div>
   <% end %>
-  <% end %>
-
-  <% else %>
-  <%= button_to "Sign in with Facebook", "/auth/facebook", id: "sign_in", :class => "btn" %>
-
-
-  
-  <% end %>
-</div>
-<% end %>
 </div>
