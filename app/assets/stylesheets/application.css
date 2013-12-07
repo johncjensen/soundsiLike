@@ -37,10 +37,12 @@
     font-style: normal;
 }
 
+.container-center {}
+
 
 .panel-content {
 	background-color: #34495E !important;
-	padding-top: 50px;
+	padding-top: 60px;
 }
 
 .list-group {

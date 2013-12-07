@@ -5,6 +5,7 @@ class DownloadsController < ApplicationController
       redirect_to :root
     end
     @downloads = Download.where user_id: is = current_user.id
+    @shit = ''
   end
 
 
@@ -13,33 +14,32 @@ class DownloadsController < ApplicationController
   end
 
 
-  # def create
-  #   @download = Download.create(download_params)
-  #   respond_to do |format|
-  #     if @download.save
-  #       format.js   {}
-  #     end
-  #   end
-  # end
-
   def create
     @download = Download.create(download_params)
-    #do whatever you want
-      respond_to do |format|
-        if @download.save
-          format.js
-          format.html { redirect_to(@drum_and_bass, :notice => 'Message was successfully created.') }
-        else
-          #deal with errors here/ redirect wherever you want
-        end
+    respond_to do |format|
+      if @download.save
+        format.js   {}
       end
     end
+  end
+
+  # def create
+  #   @download = Download.create(download_params)
+  #   #do whatever you want
+  #     respond_to do |format|
+  #       if @download.save
+  #         format.js
+  #         format.html { redirect_to(@drum_and_bass, :notice => 'Message was successfully created.') }
+  #       else
+  #         #deal with errors here/ redirect wherever you want
+  #       end
+  #     end
+  #   end
 
 
     def destroy
-      @clearbin = Download.where user_id: is = current_user.id
-      @clearbin.destroy
-      flash[:info] = "Donesies!!!"
+      @download = Download.where user_id: is = current_user.id
+      @download.destroy_all
       redirect_to downloads_path
     end
 

@@ -1,6 +1,7 @@
 Soundsilike::Application.routes.draw do
   root to: "home#index"
   resources :downloads, only:[:index, :new, :create, :destroy]
+  get '/clearbin', :to => 'downloads#destroy'
   resources :trap, only: [:index]
   resources :dubstep, only: [:index]
 
