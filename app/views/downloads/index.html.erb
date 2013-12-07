@@ -4,9 +4,15 @@
   <% @downloads.each do |dl| %>
 
     <li class='list-group-item clearfix'>
-    <h6 style="color:#33485F !important; margin: 0;"><%= time_ago_in_words dl.created_at %></h6 >
+    <small style="color:#33485F !important; margin: 0;"><%= time_ago_in_words dl.created_at %> ago</small>
+    <br>
      <h4 class="pull-left" style="color:#33485F !important; margin: 10px 0;"><%= dl.title %></h4>
-      <div class="pull-right"><%= link_to " Download", dl.url, :class=> "fa fa-download btn btn-primary", :target=> "_blank" %></div>
+      <div class="pull-right"><%= link_to " Download", dl.url, :class=> "fa fa-download btn btn-info", :target=> "_blank" %></div>
+      <br>
+      <br>
+      <br>
+      <hr>
     </li>
+
   <% end %>
 </ul>
