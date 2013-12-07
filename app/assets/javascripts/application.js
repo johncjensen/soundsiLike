@@ -18,10 +18,11 @@
 //= require angular-app
 //= require plangular
 
-
 $(document).ready(function () {
-
-    $('.addbin').on('click', function () {
-        $('.addbin').hide();
-    });
+if (window.location.href.indexOf('#_=_') > 0) {
+window.location = window.location.href.replace(/#.*/, '');
+}
+$('.addbin').on('click', function () {
+$('.addbin').hide();
+});
 });
