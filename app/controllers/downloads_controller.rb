@@ -13,14 +13,27 @@ class DownloadsController < ApplicationController
   end
 
 
+  # def create
+  #   @download = Download.create(download_params)
+  #   respond_to do |format|
+  #     if @download.save
+  #       format.js   {}
+  #     end
+  #   end
+  # end
+
   def create
     @download = Download.create(download_params)
-    respond_to do |format|
-      if @download.save
-        format.js   {}
+    #do whatever you want
+      respond_to do |format|
+        if @download.save
+          format.js
+          format.html { redirect_to(@drum_and_bass, :notice => 'Message was successfully created.') }
+        else
+          #deal with errors here/ redirect wherever you want
+        end
       end
     end
-  end
 
 
     def destroy

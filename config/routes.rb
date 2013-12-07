@@ -22,6 +22,8 @@ Soundsilike::Application.routes.draw do
   resources :tech_house, only: [:index], path: "tech-house"
   # end house
 
+  resources :minimal, only: [:index]
+
 
   # trance
   resources :goa_trance, only: [:index], path: "goa-trance"

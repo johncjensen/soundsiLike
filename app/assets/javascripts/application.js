@@ -19,4 +19,9 @@
 //= require plangular
 
 
+$(document).ready(function () {
 
+    $('.addbin').on('click', function () {
+        $('.addbin').hide();
+    });
+});

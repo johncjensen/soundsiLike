@@ -1,5 +1,5 @@
 <br>
-<h1 style="color:#f6f6f6;">Drum &amp; Bass</h1>
+<h1 style="color:#f6f6f6;">Minimal</h1>
 <br>
 <div class="row">
 <% @hotmusic.each do |track| %>
@@ -25,13 +25,14 @@
   </div>
   <a ng-href="{{ track.permalink_url }}/download" target="_blank" class="btn btn-small btn-info pull-right"><i class="fa fa-download"></i> Download</a>
   
+
   <% if current_user %>
-  <%= form_for @drum_and_bass, :url => { :controller => "downloads", :action => "create" }, remote: true do |f| %>
+  <%= form_for @minimal, :url => { :controller => "downloads", :action => "create" }, remote: true do |f| %>
   
   <%= f.hidden_field :title, :value => track.title %>
   <%= f.hidden_field :url, :value => "#{track.permalink_url}/download" %>
   <%= f.hidden_field :user_id, :value => current_user.id %>
-  <%= button_tag(type: 'submit', class: "btn btn-primary btn-small addbin" ) do %>
+  <%= button_tag(type: 'submit', class: "btn btn-primary btn-small") do %>
     <i class="fa fa-plus"></i> Add to Bin</i>
   <% end %>
   <% end %>
