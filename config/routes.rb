@@ -1,6 +1,7 @@
 Soundsilike::Application.routes.draw do
   root to: "home#index"
   get '/emails', :to => 'home#emails'
+  get '/about', :to => 'home#about'
   #download bin stuff
   resources :downloads, only:[:index, :new, :create, :destroy]
   get '/clearbin', :to => 'downloads#destroy'
@@ -14,11 +15,20 @@ Soundsilike::Application.routes.draw do
 
 
   #### GENRES ####
-  
-  resources :dubstep, only: [:index]
+  # dub genres
+  get 'dropstep', :to => 'dubstep#dropstep'
+  get 'drumstep', :to => 'dubstep#drumstep'
+  get 'dubstep', :to => 'dubstep#dubstep'
+  get 'liquid-dubstep', :to => 'dubstep#liquid_dubstep'
+  get 'lovestep', :to => 'dubstep#lovestep'
+  # end dub genres
+
+
   resources :drum_and_bass, only: [:index], path: "drum-and-bass"
 
-  # house
+  get 'hardstyle', :to => 'hardstyle#hardstyle'
+
+  # house genres
   get 'acid-house', :to => 'house#acid_house'
   get 'big-room-house', :to => 'house#big_room_house'
   get 'chicago-house', :to => 'house#chicago_house'
@@ -32,11 +42,12 @@ Soundsilike::Application.routes.draw do
   get 'nu-disco', :to => 'house#nu_disco'
   get 'progressive-house', :to => 'house#progressive_house'
   get 'tech-house', :to => 'house#tech_house'
-  # end house
+  get 'tribal-house', :to => 'house#tribal_house'
+  # end house genres
 
   resources :minimal, only: [:index]
 
-  # trance
+  # trance genres
   get 'goa-trance', :to => 'trance#goa_trance'
   get 'hard-trance', :to => 'trance#hard_trance'
   get 'progressive-trance', :to => 'trance#progressive_trance'
@@ -45,7 +56,7 @@ Soundsilike::Application.routes.draw do
   get 'trance', :to => 'trance#trance'
   get 'uplifting-trance', :to => 'trance#uplifting_trance'
   get 'vocal-trance', :to => 'trance#vocal_trance'
-  # end trance
+  # end trance genres
 
   resources :trap, only: [:index]
 end

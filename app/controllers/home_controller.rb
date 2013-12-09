@@ -6,4 +6,7 @@ class HomeController < ApplicationController
   	@useremails = User.all
   end
 
+  def about
+  end
+
 end

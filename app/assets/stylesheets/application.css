@@ -37,7 +37,7 @@
     font-style: normal;
 }
 
-.genre-title {
+.page-title {
     margin: 20px 0;
 }
 
@@ -55,6 +55,16 @@
 .viewonsoundcloud {
     float: right;
     color: #f6f6f6;
+}
+
+.footer ul.inline li a {
+    color: #f6f6f6 !important;
+}
+
+.copyright {
+    color: #227FBB !important;
+    font-weight: 600;
+    margin: 0;
 }
 
 
@@ -88,6 +98,10 @@ html {
     opacity: 1;
 }
 
+ul {
+    margin: 0 !important;
+}
+
 
 h1, h2, h3, h4, h5, h6	{
 color:#f6f6f6 !important;
@@ -102,6 +116,11 @@ h2 {
     padding-left: 22px;
 }
 
+.downloadbin-title {
+    padding-left: 0;
+    margin: 20px 0;
+}
+
 .frontpage-header {
 	font-family: 'sifonnbasic';
 }
@@ -113,6 +132,10 @@ h2 {
 
 form {
     margin: 0!important;
+}
+
+p {
+    color: #95A5A6;
 }
 
 /*
