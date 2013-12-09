@@ -4,10 +4,10 @@
     <title>soundsiLike</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-    <%= stylesheet_link_tag    "application", media: "all" %>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
     <script src="//connect.soundcloud.com/sdk.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
-    <%= javascript_include_tag "application" %>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js" data-turbolinks-track="true"></script>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
     
   </head>
@@ -47,6 +47,7 @@
                     <li><a href="acid-house">Acid House</a></li>
                     <li><a href="big-room-house">Big Room House</a></li>
                     <li><a href="chicago-house">Chicago House</a></li>
+                    <li><a href="club-house">Club House</a></li>
                     <li><a href="deep-house">Deep House</a></li>
                     <li><a href="dutch-house">Dutch House</a></li>
                     <li><a href="electro-house">Electro House</a></li>
@@ -96,5 +97,6 @@
           <li><a href="#">Contact</a></li>
         </ul>
       </div>
+      <%= render :partial => "layouts/ga" %>
     </body>
   </html>

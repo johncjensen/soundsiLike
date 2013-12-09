@@ -43,7 +43,20 @@
 
 .track-title {
     color:#f6f6f6;
+    margin:0;
+    margin-bottom: -4px;
 }
+
+.download-count {
+    font-weight: 300;
+    color: #f6f6f6;
+}
+
+.viewonsoundcloud {
+    float: right;
+    color: #f6f6f6;
+}
+
 
 html {
         background-color: #34495E !important;
