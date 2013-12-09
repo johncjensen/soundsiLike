@@ -5,6 +5,7 @@ class DownloadsController < ApplicationController
       redirect_to :root
     end
     @downloads = Download.where user_id: is = current_user.id
+    @realname = User.where(user_id: is = current_user.id)
     @shit = ''
   end
 

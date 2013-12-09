@@ -81,6 +81,14 @@ color:#f6f6f6 !important;
 -webkit-user-select: none;
 }
 
+h1 {
+    padding-left: 8px;
+}
+
+h2 {
+    padding-left: 22px;
+}
+
 .frontpage-header {
 	font-family: 'sifonnbasic';
 }

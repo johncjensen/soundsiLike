@@ -1,6 +1,6 @@
 Soundsilike::Application.routes.draw do
   root to: "home#index"
-
+  get '/emails', :to => 'home#emails'
   #download bin stuff
   resources :downloads, only:[:index, :new, :create, :destroy]
   get '/clearbin', :to => 'downloads#destroy'
