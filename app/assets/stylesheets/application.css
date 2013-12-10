@@ -10,7 +10,9 @@
  *
  *= require_self
  *= require normalize
+ 
  *= require furatto
+ *= require component
  *= require plangular
  */
 
@@ -75,7 +77,7 @@ html {
 
 .panel-content {
 	background-color: #34495E !important;
-	padding-top: 60px;
+/*	padding-top: 60px;*/
 }
 
 .list-group {

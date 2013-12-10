@@ -23,8 +23,7 @@ Soundsilike::Application.routes.draw do
   get 'lovestep', :to => 'dubstep#lovestep'
   # end dub genres
 
-
-  resources :drum_and_bass, only: [:index], path: "drum-and-bass"
+  get 'drum-and-bass', :to => 'dnb#dnb'
 
   get 'hardstyle', :to => 'hardstyle#hardstyle'
 

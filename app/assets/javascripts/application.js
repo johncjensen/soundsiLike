@@ -12,23 +12,16 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require modernizr.custom
+//= require classie
+//= require mlpushmenu
 //= require download
-//= require furatto.min
 //= require facebook
 //= require angular-app
 //= require plangular
+
 
 $(document).ready(function () {
 if (window.location.href.indexOf('#_=_') > 0) {
 window.location = window.location.href.replace(/#.*/, '');
 }});
-
-
-// $(document).ready(function () {
-// if (window.location.href.indexOf('#_=_') > 0) {
-// window.location = window.location.href.replace(/#.*/, '');
-// }
-// $('<%= track.id %>').on('click', function () {
-// $('<%= track.id %>').hide();
-// });
-// });
