@@ -1,4 +1,10 @@
 class DubstepController < ApplicationController
+  def chillstep
+    client = Soundcloud.new(:client_id => ENV['SOUNDCLOUD_CLIENT_ID'])
+    tracks = client.get('/tracks', :limit => 21, :tags => 'chillstep', :filter => 'downloadable', :order => 'hotness')
+    @hotmusic = tracks
+    @downloads = ''
+  end  
   def dropstep
     client = Soundcloud.new(:client_id => ENV['SOUNDCLOUD_CLIENT_ID'])
     tracks = client.get('/tracks', :limit => 21, :tags => 'dropstep', :filter => 'downloadable', :order => 'hotness')

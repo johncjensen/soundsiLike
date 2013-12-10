@@ -16,6 +16,7 @@ Soundsilike::Application.routes.draw do
 
   #### GENRES ####
   # dub genres
+  get 'chillstep', :to => 'dubstep#chillstep'
   get 'dropstep', :to => 'dubstep#dropstep'
   get 'drumstep', :to => 'dubstep#drumstep'
   get 'dubstep', :to => 'dubstep#dubstep'
