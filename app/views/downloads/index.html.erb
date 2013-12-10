@@ -1,8 +1,9 @@
 <%= content_for(:title, "Download Bin | soundsiLike") %>
 <a href="clearbin" class="btn btn-danger pull-right"><i class="fa fa-trash-o"></i> Clear Bin</a>
-<h2 class="downloadbin-title"><%= current_user.name %>'s Download Bin</h2>
+<br>
+<h1 class="downloadbin-title">Download Bin</h1>
 <ul class='list-group'>
-  <% @downloads.each do |dl| %>
+  <% @downloads.order("created_at desc").each do |dl| %>
 
     <li class='list-group-item clearfix'>
     <small style="color:#33485F !important; margin: 0;"><%= time_ago_in_words dl.created_at %> ago</small>

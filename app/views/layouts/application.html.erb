@@ -18,20 +18,20 @@
         <nav id="mp-menu" class="mp-menu">
           <div class="mp-level">
             <% if current_user %>
-            <h4 class="username"><%= current_user.name %></h4>
+            <h4 class="menutitle"><%= current_user.name %></h4>
             <% end %>
             <ul>
               <li class="icon icon-arrow-left">
                 <a class="icon icon-vynil" href="#">Genres</a>
                 <div class="mp-level">
-                  <h3 class="icon icon-vynil">Genres</h3>
+                  <h3 class="icon icon-vynil genretitle">Genres</h3>
                   <a class="mp-back" href="#">back</a>
                   <ul>
                     <li><a href="drum-and-bass">Drum &amp; Bass</a></li>
                     <li class="icon icon-arrow-left">
                       <a href="#">Dubstep</a>
                       <div class="mp-level">
-                        <h3>Dubstep</h3>
+                        <h3 class="menutitle">Dubstep</h3>
                         <a class="mp-back" href="#">back</a>
                         <ul>
                           <li><a href="chillstep">Chillstep</a></li>
@@ -45,9 +45,9 @@
                     </li>
                     <li><a href="hardstyle">Hardstyle</a></li>
                     <li class="icon icon-arrow-left">
-                      <a href="#">House</a>
+                      <a href="#" class-"menutitle">House</a>
                       <div class="mp-level">
-                        <h3>House</h3>
+                        <h3 class="menutitle">House</h3>
                         <a class="mp-back" href="#">back</a>
                         <ul>
                           <li><a href="acid-house">Acid House</a></li>
@@ -69,9 +69,9 @@
                     </li>
                     <li><a href="minimal">Minimal</a></li>
                     <li class="icon icon-arrow-left">
-                      <a href="#">Trance</a>
+                      <a href="#" class="menutitle">Trance</a>
                       <div class="mp-level">
-                        <h3>Trance</h3>
+                        <h3 class="menutitle">Trance</h3>
                         <a class="mp-back" href="#">back</a>
                         <ul>
                           <li><a href="goa-trance">Goa Trance</a></li>
@@ -102,7 +102,9 @@
           </div>
         </nav>
         <a href="#" id="trigger" class="menu-trigger"></a>
+        <div class="container-center">
         <%= yield %>
+      </div>
         <div class="row footer">
           <p class="copyright">soundsiLike</p>
           <ul class="inline">

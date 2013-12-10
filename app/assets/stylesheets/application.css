@@ -44,8 +44,17 @@
     -webkit-overflow-scrolling: touch; //adding this line will enable inertial scrolling
 }
 
-.username {
+.menutitle {
     padding-left: 44px;
+}
+
+.genretitle {
+    padding-left: 10px;
+}
+
+.container-center {
+    margin-top: 1% !important;
+    width: 95% !important;
 }
 
 .menu-trigger {
