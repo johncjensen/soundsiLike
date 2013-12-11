@@ -1,0 +1,7 @@
+<%- headers = ["Id", "Name"] -%>
+<%= CSV.generate_line headers %>
+<%- @negotiations.each do |n| -%>
+<%- row = [ n.id,
+            n.name ] -%>
+<%=   CSV.generate_line row %>
+<%- end -%>

@@ -1,0 +1,12 @@
+<br>
+<br>
+<hr>
+<%= link_to "Export to csv", request.parameters.merge({:format => :csv})%>
+
+
+<ul>
+<% @useremails.each do |e| %>
+<li><h6><%= e.email %></h6></li>
+<% end %>
+</ul>
+
