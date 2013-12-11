@@ -48,7 +48,7 @@ class DownloadsController < ApplicationController
     private
 
     def download_params
-      params.permit(:title, :url, :user_id)
+      params.permit(:title, :url, :user_id, :bpm, :genre)
     end
 
   end

@@ -11,25 +11,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131209012452) do
+ActiveRecord::Schema.define(version: 20131211231343) do
 
   create_table "downloads", force: true do |t|
     t.integer  "user_id"
     t.string   "url"
     t.datetime "created_at"
-    t.datetime "updated_at"
     t.string   "title"
+    t.string   "genre"
   end
 
   create_table "users", force: true do |t|
     t.string   "provider"
     t.string   "uid"
-    t.string   "name"
+    t.string   "full_name"
     t.string   "oauth_token"
     t.datetime "oauth_expires_at"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "email"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "image"
+    t.string   "link"
+    t.string   "gender"
   end
 
 end

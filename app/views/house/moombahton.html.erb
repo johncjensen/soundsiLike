@@ -36,6 +36,7 @@
     <% if current_user %>
     <%= form_for @downloads, :url => { :controller => "downloads", :action => "create" }, remote: true do |f| %>
     <%= f.hidden_field :title, :value => track.title %>
+    <%= f.hidden_field :genre, :value => track.genre %>
     <%= f.hidden_field :url, :value => "#{track.permalink_url}/download" %>
     <%= f.hidden_field :user_id, :value => current_user.id %>
     <%= button_tag(type: 'submit', class: "btn btn-primary btn-small", :id => "#{track.id}") do %>

@@ -1,6 +1,6 @@
 class EmailsController < ApplicationController
 
-def index
+  def index
     @useremails = User.all
   end
 end

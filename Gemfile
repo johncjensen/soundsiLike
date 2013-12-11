@@ -16,11 +16,10 @@ group :production do
 end
   
 gem 'compass-rails', '~> 2.0.alpha.0'
-
-
-gem "soundcloud", "~> 0.3.2"
+gem 'soundcloud', '~> 0.3.2'
 gem 'omniauth'
 gem 'omniauth-facebook', '~>1.5.1'
+gem 'gibbon', '~> 1.0.4' #mailchimp API Wrapper
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
