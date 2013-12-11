@@ -13,7 +13,6 @@ Soundsilike::Application.routes.draw do
   match 'signout', to: 'sessions#destroy', as: 'signout', via: [:get, :post]
   # end omniauth
 
-
   #### GENRES ####
   # dub genres
   get 'chillstep', :to => 'dubstep#chillstep'
