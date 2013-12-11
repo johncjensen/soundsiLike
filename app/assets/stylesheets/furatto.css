@@ -2716,7 +2716,7 @@ div.dropdown-menu form {
 }
 @media (max-width: 767px) {
     .visible-xs {
-    display: block !important;
+    display: inline !important;
 }
 .visible-xs.btn {
     display: inline-block !important;

@@ -19,6 +19,7 @@
 //= require facebook
 //= require angular-app
 //= require plangular
+//= require furatto.min
 
 
 $(document).ready(function () {

@@ -10,11 +10,11 @@
  *
  *= require_self
  *= require normalize
- 
  *= require furatto
  *= require component
  *= require icons
  *= require plangular
+
  */
 
 
@@ -40,6 +40,15 @@
     font-style: normal;
 }
 
+/*.hidden-lg {
+    display: inline !important;
+}*/
+
+
+.dropdown-menu {
+    background-color: #343946 !important;
+}
+
 .scrollablearea {
     -webkit-overflow-scrolling: touch; //adding this line will enable inertial scrolling
 }
@@ -58,10 +67,10 @@
 }
 
 .menu-trigger {
-    padding-bottom: 30px;
-    padding-right: 30px;
-    margin-top: 60px;
-    margin-left: 12px;
+    padding-bottom: 8px;/*
+    padding-right: 30px;*/
+    margin-top: 8px;
+/*    margin-left: 12px;*/
 }
 
 a {
@@ -106,7 +115,7 @@ html {
 
 .panel-content {
 	background-color: #34495E !important;
-/*	padding-top: 60px;*/
+	padding-top: 40px;
 }
 
 .list-group {
