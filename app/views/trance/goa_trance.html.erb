@@ -40,7 +40,7 @@
     <%= f.hidden_field :url, :value => "#{track.permalink_url}/download" %>
     <%= f.hidden_field :user_id, :value => current_user.id %>
     <%= button_tag(type: 'submit', class: "btn btn-primary btn-small", :id => "#{track.id}") do %>
-    <i class="fa fa-plus"></i> Add to Bin</i>
+    <i class="fa fa-plus"></i> Add to Download Bin</i>
     <% end %>
     <% end %>
     <% else %>
