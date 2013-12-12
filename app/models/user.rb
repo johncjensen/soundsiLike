@@ -13,11 +13,12 @@ class User < ActiveRecord::Base
       user.oauth_token = auth.credentials.token
       user.oauth_expires_at = Time.at(auth.credentials.expires_at)
       user.save!
-      end
+      if User.where(:uid => auth.uid).blank?
+      gb = Gibbon::API.new('7bad2873c41bfeed2adb6c88e4c54f96-us3')
+      list_id = 'aa300ad26a'
+      gb.lists.subscribe({:id => list_id, :email => {:email => user.email}, :merge_vars => {:FNAME => user.first_name, :LNAME => user.last_name, :GENDER => user.gender}, :double_optin => true})
+    else
+    end
+    end
   end
 end
-
-# gb = Gibbon::API.new('7bad2873c41bfeed2adb6c88e4c54f96-us3')
-#       list_id = 'aa300ad26a'
-#       gb.lists.subscribe({:id => list_id, :email => {:email => user.email}, :merge_vars => {:FNAME => user.first_name, :LNAME => user.last_name, :GENDER => user.gender}, :double_optin => true})
-      
