@@ -19,6 +19,5 @@ test:
   timeout: 5000
 
 production:
-  hostname: localhost
   pool: 5
   timeout: 5000
