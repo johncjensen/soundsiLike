@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131211231343) do
+ActiveRecord::Schema.define(version: 20131212012604) do
 
   create_table "downloads", force: true do |t|
     t.integer  "user_id"
@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 20131211231343) do
     t.string   "image"
     t.string   "link"
     t.string   "gender"
+    t.string   "location"
   end
 
 end
