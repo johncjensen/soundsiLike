@@ -17,6 +17,8 @@
 //= require mlpushmenu
 //= require download
 //= require facebook
+//= require angular.min
+//= require soundcloud-sdk
 //= require angular-app
 //= require plangular
 //= require furatto.min

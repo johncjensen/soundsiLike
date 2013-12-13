@@ -2,12 +2,10 @@
 <html>
   <head>
     <title><%= yield(:title) %></title>
+    <meta name="description" content="Discover Trending &amp; Hot Sounds from SoundCloud, Only Browse Downloadable Content, Add to Your &quot;Track Bin&quot; to Download Later.">
     <meta property="og:title" content="<%= yield(:title) %>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <%= stylesheet_link_tag    "application", media: "all" %>
-    <script src="//connect.soundcloud.com/sdk.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
     <script>

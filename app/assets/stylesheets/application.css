@@ -11,6 +11,7 @@
  *= require_self
  *= require normalize
  *= require furatto
+ *= require font-awesome
  *= require component
  *= require icons
  *= require plangular
