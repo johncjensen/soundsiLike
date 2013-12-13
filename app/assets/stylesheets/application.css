@@ -77,6 +77,15 @@ a {
     color: #ECF0F1 !important;
 }
 
+a:hover {
+    text-decoration: none !important;
+}
+
+.fp-text {
+    font-size: 32px;
+    line-height: 46px;
+}
+
 .page-title {
     margin: 20px 0;
 }
