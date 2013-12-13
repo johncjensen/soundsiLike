@@ -14,7 +14,10 @@
 	<i class="fa fa-plus"></i><br> Add to Your "Track Bin" to Download Later
 </h1>
 
-	
+<% if current_user %>
 
-
+<% else %>
+<br>
+<a href="/auth/facebook" class="btn btn-large btn-info">Login with Facebook</a>
+<% end %>
 </center>
