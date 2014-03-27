@@ -44,7 +44,7 @@ Soundsilike::Application.routes.draw do
   get 'tribal-house', :to => 'house#tribal_house'
   # end house genres
 
-  resources :minimal, only: [:index]
+  get 'minimal', :to => 'minimal#index'
 
   # trance genres
   get 'goa-trance', :to => 'trance#goa_trance'
@@ -57,5 +57,5 @@ Soundsilike::Application.routes.draw do
   get 'vocal-trance', :to => 'trance#vocal_trance'
   # end trance genres
 
-  resources :trap, only: [:index]
+  get 'trap', :to => 'trap#index'
 end
