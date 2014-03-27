@@ -1,86 +1,44 @@
 class HouseController < ApplicationController
   def acid_house
-    client = Soundcloud.new(:client_id => ENV['SOUNDCLOUD_CLIENT_ID'])
-    tracks = client.get('/tracks', :limit => 21, :tags => 'acid house, acidhouse', :filter => 'downloadable', :order => 'hotness')
-    @hotmusic = tracks
-    @downloads = ''
+    set_genre_to_pull("acid house, acidhouse")
   end
   def big_room_house
-    client = Soundcloud.new(:client_id => ENV['SOUNDCLOUD_CLIENT_ID'])
-    tracks = client.get('/tracks', :limit => 21, :tags => 'bigroomhouse', :filter => 'downloadable', :order => 'hotness')
-    @hotmusic = tracks
-    @downloads = ''
+    set_genre_to_pull("bigroomhouse")
   end
   def chicago_house
-    client = Soundcloud.new(:client_id => ENV['SOUNDCLOUD_CLIENT_ID'])
-    tracks = client.get('/tracks', :limit => 21, :tags => 'chicago house', :filter => 'downloadable', :order => 'hotness')
-    @hotmusic = tracks
-    @downloads = ''
+    set_genre_to_pull("chicago house")
   end
   def club_house
-    client = Soundcloud.new(:client_id => ENV['SOUNDCLOUD_CLIENT_ID'])
-    tracks = client.get('/tracks', :limit => 21, :tags => 'clubhouse', :filter => 'downloadable', :order => 'hotness')
-    @hotmusic = tracks
-    @downloads = ''
+    set_genre_to_pull("clubhouse")
   end
   def deep_house
-    client = Soundcloud.new(:client_id => ENV['SOUNDCLOUD_CLIENT_ID'])
-    tracks = client.get('/tracks', :limit => 21, :tags => 'deep house', :filter => 'downloadable', :order => 'hotness')
-    @hotmusic = tracks
-    @downloads = ''
+    set_genre_to_pull("deep house")
   end
   def dutch_house
-    client = Soundcloud.new(:client_id => ENV['SOUNDCLOUD_CLIENT_ID'])
-    tracks = client.get('/tracks', :limit => 21, :tags => 'dutch house', :filter => 'downloadable', :order => 'hotness')
-    @hotmusic = tracks
-    @downloads = ''
+    set_genre_to_pull("dutch house")
   end
   def electro_house
-    client = Soundcloud.new(:client_id => ENV['SOUNDCLOUD_CLIENT_ID'])
-    tracks = client.get('/tracks', :limit => 21, :tags => 'electro house', :filter => 'downloadable', :order => 'hotness')
-    @hotmusic = tracks
-    @downloads = ''
+    set_genre_to_pull("electro house")
   end
   def funky_house
-    client = Soundcloud.new(:client_id => ENV['SOUNDCLOUD_CLIENT_ID'])
-    tracks = client.get('/tracks', :limit => 21, :tags => 'funky house', :filter => 'downloadable', :order => 'hotness')
-    @hotmusic = tracks
-    @downloads = ''
+    set_genre_to_pull("funky house")
   end
   def house
-    client = Soundcloud.new(:client_id => ENV['SOUNDCLOUD_CLIENT_ID'])
-    tracks = client.get('/tracks', :limit => 21, :tags => 'house', :filter => 'downloadable', :order => 'hotness')
-    @hotmusic = tracks
-    @downloads = ''
+    set_genre_to_pull("house")
   end
   def moombahton
-    client = Soundcloud.new(:client_id => ENV['SOUNDCLOUD_CLIENT_ID'])
-    tracks = client.get('/tracks', :limit => 21, :tags => 'moombahton', :filter => 'downloadable', :order => 'hotness')
-    @hotmusic = tracks
-    @downloads = ''
+    set_genre_to_pull("moombahton")
   end
   def nu_disco
-    client = Soundcloud.new(:client_id => ENV['SOUNDCLOUD_CLIENT_ID'])
-    tracks = client.get('/tracks', :limit => 21, :tags => 'nu disco', :filter => 'downloadable', :order => 'hotness')
-    @hotmusic = tracks
-    @downloads = ''
+    set_genre_to_pull("nu disco")
   end
   def progressive_house
-    client = Soundcloud.new(:client_id => ENV['SOUNDCLOUD_CLIENT_ID'])
-    tracks = client.get('/tracks', :limit => 21, :tags => 'progressive house', :filter => 'downloadable', :order => 'hotness')
-    @hotmusic = tracks
-    @downloads = ''
+    set_genre_to_pull("progressive house")
   end
   def tech_house
-    client = Soundcloud.new(:client_id => ENV['SOUNDCLOUD_CLIENT_ID'])
-    tracks = client.get('/tracks', :limit => 21, :tags => 'tech house', :filter => 'downloadable', :order => 'hotness')
-    @hotmusic = tracks
-    @downloads = ''
+    set_genre_to_pull("tech house")
   end
   def tribal_house
-    client = Soundcloud.new(:client_id => ENV['SOUNDCLOUD_CLIENT_ID'])
-    tracks = client.get('/tracks', :limit => 21, :tags => 'tribal house', :filter => 'downloadable', :order => 'hotness')
-    @hotmusic = tracks
-    @downloads = ''
+    set_genre_to_pull("tribal house")
   end
 end

@@ -1,38 +1,20 @@
 class DubstepController < ApplicationController
   def chillstep
-    client = Soundcloud.new(:client_id => ENV['SOUNDCLOUD_CLIENT_ID'])
-    tracks = client.get('/tracks', :limit => 21, :tags => 'chillstep', :filter => 'downloadable', :order => 'hotness')
-    @hotmusic = tracks
-    @downloads = ''
-  end  
+    set_genre_to_pull("chillstep")
+  end
   def dropstep
-    client = Soundcloud.new(:client_id => ENV['SOUNDCLOUD_CLIENT_ID'])
-    tracks = client.get('/tracks', :limit => 21, :tags => 'dropstep', :filter => 'downloadable', :order => 'hotness')
-    @hotmusic = tracks
-    @downloads = ''
+    set_genre_to_pull("dropstep")
   end
   def drumstep
-    client = Soundcloud.new(:client_id => ENV['SOUNDCLOUD_CLIENT_ID'])
-    tracks = client.get('/tracks', :limit => 21, :tags => 'drumstep', :filter => 'downloadable', :order => 'hotness')
-    @hotmusic = tracks
-    @downloads = ''
+    set_genre_to_pull("drumstep")
   end
   def dubstep
-    client = Soundcloud.new(:client_id => ENV['SOUNDCLOUD_CLIENT_ID'])
-    tracks = client.get('/tracks', :limit => 21, :tags => 'dubstep', :filter => 'downloadable', :order => 'hotness')
-    @hotmusic = tracks
-    @downloads = ''
+    set_genre_to_pull("dubstep")
   end
   def liquid_dubstep
-    client = Soundcloud.new(:client_id => ENV['SOUNDCLOUD_CLIENT_ID'])
-    tracks = client.get('/tracks', :limit => 21, :tags => 'liquid dubstep', :filter => 'downloadable', :order => 'hotness')
-    @hotmusic = tracks
-    @downloads = ''
+    set_genre_to_pull("liquid dubstep")
   end
   def lovestep
-    client = Soundcloud.new(:client_id => ENV['SOUNDCLOUD_CLIENT_ID'])
-    tracks = client.get('/tracks', :limit => 21, :tags => 'lovestep', :filter => 'downloadable', :order => 'hotness')
-    @hotmusic = tracks
-    @downloads = ''
+    set_genre_to_pull("lovestep")
   end
 end

@@ -1,50 +1,26 @@
 class TranceController < ApplicationController
   def goa_trance
-    client = Soundcloud.new(:client_id => ENV['SOUNDCLOUD_CLIENT_ID'])
-    tracks = client.get('/tracks', :limit => 21, :tags => 'goa trance', :filter => 'downloadable', :order => 'hotness')
-    @hotmusic = tracks 
-    @downloads = ''
+    set_genre_to_pull("goa trance")
   end
   def hard_trance
-    client = Soundcloud.new(:client_id => ENV['SOUNDCLOUD_CLIENT_ID'])
-    tracks = client.get('/tracks', :limit => 21, :tags => 'hard trance', :filter => 'downloadable', :order => 'hotness')
-    @hotmusic = tracks 
-    @downloads = ''
+    set_genre_to_pull("hard trance")
   end
   def progressive_trance
-    client = Soundcloud.new(:client_id => ENV['SOUNDCLOUD_CLIENT_ID'])
-    tracks = client.get('/tracks', :limit => 21, :tags => 'progressive trance', :filter => 'downloadable', :order => 'hotness')
-    @hotmusic = tracks 
-    @downloads = ''
+    set_genre_to_pull("progressive trance")
   end
   def psy_trance
-    client = Soundcloud.new(:client_id => ENV['SOUNDCLOUD_CLIENT_ID'])
-    tracks = client.get('/tracks', :limit => 21, :tags => 'psy trance', :filter => 'downloadable', :order => 'hotness')
-    @hotmusic = tracks 
-    @downloads = ''
+    set_genre_to_pull("psy trance")
   end
   def tech_trance
-    client = Soundcloud.new(:client_id => ENV['SOUNDCLOUD_CLIENT_ID'])
-    tracks = client.get('/tracks', :limit => 21, :tags => 'tech trance', :filter => 'downloadable', :order => 'hotness')
-    @hotmusic = tracks 
-    @downloads = ''
+    set_genre_to_pull("tech trance")
   end
   def trance
-    client = Soundcloud.new(:client_id => ENV['SOUNDCLOUD_CLIENT_ID'])
-    tracks = client.get('/tracks', :limit => 21, :tags => 'trance', :filter => 'downloadable', :order => 'hotness')
-    @hotmusic = tracks 
-    @downloads = ''
+    set_genre_to_pull("trance")
   end
   def uplifting_trance
-    client = Soundcloud.new(:client_id => ENV['SOUNDCLOUD_CLIENT_ID'])
-    tracks = client.get('/tracks', :limit => 21, :tags => 'uplifting trance', :filter => 'downloadable', :order => 'hotness')
-    @hotmusic = tracks 
-    @downloads = ''
+    set_genre_to_pull("uplifting trance")
   end
   def vocal_trance
-    client = Soundcloud.new(:client_id => ENV['SOUNDCLOUD_CLIENT_ID'])
-    tracks = client.get('/tracks', :limit => 21, :tags => 'vocal trance', :filter => 'downloadable', :order => 'hotness')
-    @hotmusic = tracks 
-    @downloads = ''
+    set_genre_to_pull("vocal trance")
   end
 end
