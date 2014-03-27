@@ -1,0 +1,73 @@
+<div class="navbar navbar-fixed-top">
+        <div class="navbar-inner docs-navbar-inner">
+          <div class="container">
+            <a href="#" id="trigger" class="menu-trigger"></a>
+            <div class="nav-collapse collapse">
+              <nav id="menu">
+                <ul class="nav">
+                  <li><a class="brand" href="/">soundsiLike</a></li>
+                  <% if current_user %>
+                  <li class="dropdown pull-right">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"><%= current_user.first_name %><b class="caret bottom-up"></b></a>
+                    <ul class="dropdown-menu bottom-up">
+                      <li><a href="downloads" class="fa fa-download"> Download Bin</a></li>
+                      <li><%= link_to " Sign out", signout_path, id: "sign_out", :class => "fa fa-sign-out" %></li>
+                    </ul>
+                    <% else %>
+                    <li><a href="/auth/facebook" class="">Login with Facebook</a></li>
+                    <!--   <li><%= button_to "Sign in with Facebook", "/auth/facebook", id: "sign_in", :class => "btn btn-info btn-navbar" %></li> -->
+                  </li>
+                  <% end %>
+                  <li><a href="drum-and-bass">Drum &amp; Bass</a></li>
+                  <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Dubstep<b class="caret bottom-up"></b></a>
+                    <ul class="dropdown-menu bottom-up pull-right">
+                      <li><a href="chillstep">Chillstep</a></li>
+                      <li><a href="dropstep">Dropstep</a></li>
+                      <li><a href="drumstep">Drumstep</a></li>
+                      <li><a href="dubstep">Dubstep</a></li>
+                      <li><a href="liquid-dubstep">Liquid Dubstep</a></li>
+                      <li><a href="lovestep">Lovestep</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="hardstyle">Hardstyle</a></li>
+                  <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">House<b class="caret bottom-up"></b></a>
+                    <ul class="dropdown-menu bottom-up pull-right">
+                      <li><a href="acid-house">Acid House</a></li>
+                      <li><a href="big-room-house">Big Room House</a></li>
+                      <li><a href="chicago-house">Chicago House</a></li>
+                      <li><a href="club-house">Club House</a></li>
+                      <li><a href="deep-house">Deep House</a></li>
+                      <li><a href="dutch-house">Dutch House</a></li>
+                      <li><a href="electro-house">Electro House</a></li>
+                      <li><a href="funky-house">Funky House</a></li>
+                      <li><a href="house">House</a></li>
+                      <li><a href="moombahton">Moombahton</a></li>
+                      <li><a href="nu-disco">Nu Disco</a></li>
+                      <li><a href="progressive-house">Progressive House</a></li>
+                      <li><a href="tech-house">Tech House</a></li>
+                      <li><a href="tribal-house">Tribal House</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="minimal">Minimal</a></li>
+                  <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Trance<b class="caret bottom-up"></b></a>
+                    <ul class="dropdown-menu bottom-up pull-right">
+                      <li><a href="goa-trance">Goa Trance</a></li>
+                      <li><a href="hard-trance">Hard Trance</a></li>
+                      <li><a href="progressive-trance">Progressive Trance</a></li>
+                      <li><a href="psy-trance">Psy Trance</a></li>
+                      <li><a href="tech-trance">Tech Trance</a></li>
+                      <li><a href="trance">Trance</a></li>
+                      <li><a href="uplifting-trance">Uplifting Trance</a></li>
+                      <li><a href="vocal-trance">Vocal Trance</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="trap">Trap</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>

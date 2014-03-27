@@ -9,190 +9,34 @@
     <%= stylesheet_link_tag    "application", media: "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
-    <%= render :partial => "layouts/tracking" %>    
+    <%= render :partial => "layouts/tracking" %>
   </head>
   <body>
     <div class="panel-content scrollablearea">
-      <div class="navbar navbar-fixed-top">
-        <div class="navbar-inner docs-navbar-inner">
-          <div class="container">
-            <a href="#" id="trigger" class="menu-trigger"></a>
-            <div class="nav-collapse collapse">
-              <nav id="menu">
-                <ul class="nav">
-                  <li><a class="brand" href="/">soundsiLike</a></li>
-                  <% if current_user %>
-                  <li class="dropdown pull-right">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"><%= current_user.first_name %><b class="caret bottom-up"></b></a>
-                    <ul class="dropdown-menu bottom-up">
-                      <li><a href="downloads" class="fa fa-download"> Download Bin</a></li>
-                      <li><%= link_to " Sign out", signout_path, id: "sign_out", :class => "fa fa-sign-out" %></li>
-                    </ul>
-                    <% else %>
-                    <li><a href="/auth/facebook" class="">Login with Facebook</a></li>
-                    <!--   <li><%= button_to "Sign in with Facebook", "/auth/facebook", id: "sign_in", :class => "btn btn-info btn-navbar" %></li> -->
-                  </li>
-                  <% end %>
-                  <li><a href="drum-and-bass">Drum &amp; Bass</a></li>
-                  <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Dubstep<b class="caret bottom-up"></b></a>
-                    <ul class="dropdown-menu bottom-up pull-right">
-                      <li><a href="dropstep">Dropstep</a></li>
-                      <li><a href="drumstep">Drumstep</a></li>
-                      <li><a href="dubstep">Dubstep</a></li>
-                      <li><a href="liquid-dubstep">Liquid Dubstep</a></li>
-                      <li><a href="lovestep">Lovestep</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="hardstyle">Hardstyle</a></li>
-                  <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">House<b class="caret bottom-up"></b></a>
-                    <ul class="dropdown-menu bottom-up pull-right">
-                      <li><a href="acid-house">Acid House</a></li>
-                      <li><a href="big-room-house">Big Room House</a></li>
-                      <li><a href="chicago-house">Chicago House</a></li>
-                      <li><a href="club-house">Club House</a></li>
-                      <li><a href="deep-house">Deep House</a></li>
-                      <li><a href="dutch-house">Dutch House</a></li>
-                      <li><a href="electro-house">Electro House</a></li>
-                      <li><a href="funky-house">Funky House</a></li>
-                      <li><a href="house">House</a></li>
-                      <li><a href="moombahton">Moombahton</a></li>
-                      <li><a href="nu-disco">Nu Disco</a></li>
-                      <li><a href="progressive-house">Progressive House</a></li>
-                      <li><a href="tech-house">Tech House</a></li>
-                      <li><a href="tribal-house">Tribal House</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="minimal">Minimal</a></li>
-                  
-                  <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Trance<b class="caret bottom-up"></b></a>
-                    <ul class="dropdown-menu bottom-up pull-right">
-                      <li><a href="goa-trance">Goa Trance</a></li>
-                      <li><a href="hard-trance">Hard Trance</a></li>
-                      <li><a href="progressive-trance">Progressive Trance</a></li>
-                      <li><a href="psy-trance">Psy Trance</a></li>
-                      <li><a href="tech-trance">Tech Trance</a></li>
-                      <li><a href="trance">Trance</a></li>
-                      <li><a href="uplifting-trance">Uplifting Trance</a></li>
-                      <li><a href="vocal-trance">Vocal Trance</a></li>
-                    </ul>
-                  </li>
-                  
-                  <li><a href="trap">Trap</a></li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-        </div>
-      </div>
+      <%= render 'navbar_top' %>
       <!-- Push Wrapper -->
       <div class="mp-pusher" id="mp-pusher">
         <!-- mp-menu -->
         <nav id="mp-menu" class="mp-menu">
-          <div class="mp-level">
-            <% if current_user %>
-            <h4 class="menutitle"><%= current_user.first_name %></h4>
-            <% end %>
-            <ul>
-              <li class="icon icon-arrow-left">
-                <a class="icon icon-vynil" href="#">Genres</a>
-                <div class="mp-level">
-                  <h3 class="icon icon-vynil genretitle">Genres</h3>
-                  <a class="mp-back" href="#">back</a>
-                  <ul>
-                    <li><a href="drum-and-bass">Drum &amp; Bass</a></li>
-                    <li class="icon icon-arrow-left">
-                      <a href="#">Dubstep</a>
-                      <div class="mp-level">
-                        <h3 class="menutitle">Dubstep</h3>
-                        <a class="mp-back" href="#">back</a>
-                        <ul>
-                          <li><a href="chillstep">Chillstep</a></li>
-                          <li><a href="dropstep">Dropstep</a></li>
-                          <li><a href="drumstep">Drumstep</a></li>
-                          <li><a href="dubstep">Dubstep</a></li>
-                          <li><a href="liquid-dubstep">Liquid Dubstep</a></li>
-                          <li><a href="lovestep">Lovestep</a></li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li><a href="hardstyle">Hardstyle</a></li>
-                    <li class="icon icon-arrow-left">
-                      <a href="#" class-"menutitle">House</a>
-                      <div class="mp-level">
-                        <h3 class="menutitle">House</h3>
-                        <a class="mp-back" href="#">back</a>
-                        <ul>
-                          <li><a href="acid-house">Acid House</a></li>
-                          <li><a href="big-room-house">Big Room House</a></li>
-                          <li><a href="chicago-house">Chicago House</a></li>
-                          <li><a href="club-house">Club House</a></li>
-                          <li><a href="deep-house">Deep House</a></li>
-                          <li><a href="dutch-house">Dutch House</a></li>
-                          <li><a href="electro-house">Electro House</a></li>
-                          <li><a href="funky-house">Funky House</a></li>
-                          <li><a href="house">House</a></li>
-                          <li><a href="moombahton">Moombahton</a></li>
-                          <li><a href="nu-disco">Nu Disco</a></li>
-                          <li><a href="progressive-house">Progressive House</a></li>
-                          <li><a href="tech-house">Tech House</a></li>
-                          <li><a href="tribal-house">Tribal House</a></li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li><a href="minimal">Minimal</a></li>
-                    <li class="icon icon-arrow-left">
-                      <a href="#" class="menutitle">Trance</a>
-                      <div class="mp-level">
-                        <h3 class="menutitle">Trance</h3>
-                        <a class="mp-back" href="#">back</a>
-                        <ul>
-                          <li><a href="goa-trance">Goa Trance</a></li>
-                          <li><a href="hard-trance">Hard Trance</a></li>
-                          <li><a href="progressive-trance">Progressive Trance</a></li>
-                          <li><a href="psy-trance">Psy-Trance</a></li>
-                          <li><a href="tech-trance">Tech Trance</a></li>
-                          <li><a href="trance">Trance</a></li>
-                          <li><a href="uplifting-trance">Uplifting Trance</a></li>
-                          <li><a href="vocal-trance">Vocal Trance</a></li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li><a href="trap">Trap</a></li>
-                  </ul>
-                </div>
-              </li>
-              <!-- <li><a class="icon icon-photo" href="#">Collections</a></li> -->
-              <!-- <li><a class="icon icon-wallet" href="https://twitter.com/soundsilike" target="_blank">Twitter</a></li> -->
-              <% if current_user %>
-              <li><a href="downloads" class="icon icon-data">Download Bin</a></li>
-              <li><a href="signout" class="icon icon-lock">Logout</a></li>
-              <% else %>
-              <li><a href="auth/facebook" class="icon icon-key">Login with Facebook</a></li>
-              <% end %>
-            </ul>
-            
+          <%= render 'pusher_menu_content' %>
+          <div class="container-center">
+            <%= yield %>
           </div>
-        </nav>
-        <div class="container-center">
-          <%= yield %>
+          <div class="row footer">
+            <a href="mailto:john@soundsilike.co?subject=Feedback and Suggestions">Feedback &amp; Suggestions</a>
+            <br>
+            <br>
+            <!-- <p class="copyright">soundsiLike</p> -->
+            <a href="https://www.digitalocean.com/?refcode=8bdd8c21151b"><img src="assets/digitalocean-badge-gray.png"></a>
+            <!--   <ul class="inline">
+              <li><a href="https://twitter.com/soundsilike" target="_blank"><i class="fa fa-twitter"></i> Twitter</a></li>
+            </ul> -->
+          </div>
         </div>
-        <div class="row footer">
-          <a href="mailto:john@soundsilike.co?subject=Feedback and Suggestions">Feedback &amp; Suggestions</a>
-          <br>
-          <br>
-          <!-- <p class="copyright">soundsiLike</p> -->
-          <a href="https://www.digitalocean.com/?refcode=8bdd8c21151b"><img src="assets/digitalocean-badge-gray.png"></a>
-          <!--   <ul class="inline">
-            <li><a href="https://twitter.com/soundsilike" target="_blank"><i class="fa fa-twitter"></i> Twitter</a></li>
-          </ul> -->
-        </div>
+        <%= render :partial => "layouts/ga" %>
+        <script>
+        new mlPushMenu( document.getElementById( 'mp-menu' ), document.getElementById( 'trigger' ) );
+        </script>
       </div>
-      <%= render :partial => "layouts/ga" %>
-      <script>
-      new mlPushMenu( document.getElementById( 'mp-menu' ), document.getElementById( 'trigger' ) );
-      </script>
     </body>
   </html>
