@@ -1,1 +1,0 @@
-ENV['MC_API_KEY'] = '7bad2873c41bfeed2adb6c88e4c54f96-us3'
