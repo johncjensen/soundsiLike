@@ -8,10 +8,10 @@
   });
   </script>
   <div plangular data-src="'<%= track.permalink_url %>'" class="col-4">
-    <h5 class="track-title"><%=h truncate(track.title, :length => 52) %></h5>
+    <h6 class="track-title"><%=h truncate(track.title, :length => 45) %></h6>
     <small class="download-count"><%= track.download_count %> Downloads</small>
     <a href="<%= track.permalink_url %>" target="_blank"><i class="fa fa-link viewonsoundcloud"></i></a>
-    <div class="asp-16o9 bg-center bg-cover pos-rel" style="background-image: url(<%= track.artwork_url.to_s.gsub('-large', '-t500x500') %>)">
+    <div class="asp-16o9 bg-center bg-cover pos-rel" style="background-image: url(<%= check_if_artwork_present(track) %>)">
       <div class="media pos-abs right bottom left">
         <div class="img sq48 sq48-text">
           <a href="" ng-click="player.play(track)" ng-hide="player.playing == track"
@@ -29,7 +29,7 @@
         </div>
       </div>
     </div>
-    
+
     <a ng-href="{{ track.permalink_url }}/download" target="_blank" class="btn btn-small btn-info pull-right"><i class="fa fa-download"></i> Download</a>
     <% if current_user %>
     <%= form_for @downloads, :url => { :controller => "downloads", :action => "create" }, remote: true do |f| %>
